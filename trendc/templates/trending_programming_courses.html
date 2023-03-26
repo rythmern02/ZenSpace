@@ -1,0 +1,51 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #video-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .video {
+            margin: 10px;
+            width: 300px;
+        }
+
+        .video img {
+            width: 100%;
+        }
+
+        .video h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .video p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="video-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON('/trendc/trending_programming_courses/', function (data) {
+                var videoContainer = $('#video-container');
+                $.each(data, function (index, video) {
+                    var videoHTML = '<div class="video">' +
+                        '<a href="' + video.video_url + '">' +
+                        '<img src="' + video.thumbnail_url + '">' +
+                        '<h3>' + video.title + '</h3>' +
+                        '<p>' + video.description + '</p>' +
+                        '</a>' +
+                        '</div>';
+                    videoContainer.append(videoHTML);
+                });
+            });
+        });
+    </script>
+</body>

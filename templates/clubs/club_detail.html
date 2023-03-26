@@ -1,0 +1,48 @@
+{% extends 'clubs/base.html' %}
+{%load static%}
+
+{%block content%}
+<div class="container mb-5">
+    <nav class="nav mt-4">
+        <a class="nav-link " href="/clubs/club_detail">Programming club</a>
+        <a class="nav-link " href="/clubs/club_detail">Music Club</a>
+        <a class="nav-link " href="/clubs/club_detail">Coding Club</a>
+        <a class="nav-link " href="/clubs/club_detail">Singing Club</a>
+    </nav>
+</div>
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-sm-10">
+            <div class="row mb-4">
+                <div class="col-sm-12">
+                    <h3> Club <i class="bi bi-align-center"></i></h3>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card mb-3 border-0">
+                        <img src="{% static 'images/pbanner.svg' %}" class="card-img-top" style="height: 20vh;" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Club Name</h5>
+                            <p class="card-text">Info of club</p>
+                            <p class="card-text text-end"><small class="text-muted">Created time of club</small></p>
+                            <a href="" class="btn btn-primary btn-sm">Join Club</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2" style="border-left: 1px solid gray;">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="">Member 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Member 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Member 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Member 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Member 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Member 7</a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

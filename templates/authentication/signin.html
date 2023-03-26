@@ -1,0 +1,30 @@
+{%  extends 'authentication/base.html'  %}
+
+{% block content %}
+<div class="col-md-5">
+    <div class="card-body">
+        <form method="post" action="" class="mb-2">
+            {% csrf_token %}
+            <label class="mb-2 fs-5">Username</label>
+            <div class="input-group mb-4">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter User id...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-person-fill"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Password</label>
+            <div class="input-group mb-2">
+                <input type="text" id="pass1" name="pass1" class="form-control" placeholder="Enter User Password...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <a href="" style="color: blue;" class="fp">Forgot Password ?</a>
+            <br>
+            <a href="signup" style="color: blue;" style="text-align: end;">Signup</a>
+            <div class="input-group mt-3">
+                <input type="submit" value="Login" name="login" class="btn btn-sm btn-primary">
+            </div>
+        </form>
+        <div class="input-group mt-3">
+            <a href="/"> <input type="submit" value="Browse as Guest" name="bag" class="btn btn-sm btn-primary"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

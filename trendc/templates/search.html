@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Zenspace YouTube Courses Search</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    </head>
+
+    <body class="bg-gray-200">
+        <div class="container mx-auto my-8">
+            <form action="{% url 'search' %}" method="get" class="flex items-center justify-center">
+                <input type="text" name="q" id="q"
+                    class="bg-white rounded-lg py-3 px-4 w-3/4 md:w-1/2 lg:w-1/3 text-gray-800 shadow-lg focus:outline-none focus:shadow-outline"
+                    placeholder="Search for YouTube courses...">
+                <button type="submit"
+                    class="bg-blue-500 text-white py-3 px-6 rounded-lg ml-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline">Search</button>
+            </form>
+        </div>
+        <!-- Footer section -->
+        <footer class="bg-gray-200 py-8 px-6">
+            <div class="container mx-auto text-center">
+                <p class="text-gray-600 mb-2">&copy; 2023 Zenspace. All rights reserved.</p>
+                <nav class <ul class="flex justify-center">
+                    <li class="mr-6">
+                        <a href="#" class="text-gray-600 hover:text-gray-800">Terms of Service</a>
+                    </li>
+                    <li class="mr-6">
+                        <a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-600 hover:text-gray-800">Contact Us</a>
+                    </li>
+                    </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>

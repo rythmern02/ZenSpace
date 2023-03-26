@@ -1,0 +1,63 @@
+{% extends 'clubs/base.html' %}
+
+{% block content %}
+<nav class="bg-gray-900">
+    <ul class="flex justify-between items-center px-4 py-3">
+        <li>
+            <a href="/" class="text-gray-300 hover:text-white">
+                Home
+            </a>
+        </li>
+        {% if user.is_authenticated %}
+        <li>
+            <a href="/clubs/create" class="text-gray-300 hover:text-white">
+                Create Club
+            </a>
+        </li>
+        <li>
+            <a href="/authentication/signout" class="text-gray-300 hover:text-white">
+                Logout
+            </a>
+        </li>
+        {% else %}
+        <li>
+            <a href="/authentication" class="text-gray-300 hover:text-white">
+                Login
+            </a>
+        </li>
+        <li>
+            <a href="/authentication/signup" class="text-gray-300 hover:text-white">
+                Sign up
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+
+<div class="container mb-5">
+
+    <!-- club Section -->
+
+    <div class="row mt-5 mb-4">
+        <div class="col-sm-12">
+            <h4><a href="/clubs/clubs">Clubs <i class="bi bi-align-center"></i></a></i></h4>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+
+        {% for club in clubs %}
+        <div class="col-sm-3 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>{{ club.name }}</h5>
+                </div>
+                <div class="card-body">
+                    <p>{{ club.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% endblock %}

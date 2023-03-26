@@ -1,0 +1,48 @@
+{%  extends 'authentication/base.html'  %}
+
+{% block content %}
+
+<div class="col-md-5">
+    <div class="card-body">
+        <form method="POST" action="" class="mb-2">
+            {% csrf_token %}
+            <label class="mb-2 fs-5">Username</label>
+            <div class="input-group mb-4">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter User id...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-person-fill"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Firstname</label>
+            <div class="input-group mb-2">
+                <input type="text" id="fname" name="fname" class="form-control" placeholder="Enter User First Name...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Lastname</label>
+            <div class="input-group mb-2">
+                <input type="text" id="lname" name="lname" class="form-control" placeholder="Enter User Last name...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Email</label>
+            <div class="input-group mb-2">
+                <input type="text" id="email" name="email" class="form-control" placeholder="Enter User Email...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Password</label>
+            <div class="input-group mb-2">
+                <input type="text" id="pass1" name="pass1" class="form-control" placeholder="Enter User Password...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <label class="mb-2 fs-5">Confirm Password</label>
+            <div class="input-group mb-2">
+                <input type="text" id="pass2" name="pass2" class="form-control" placeholder="Confirm the Password...">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-key"></i></span>
+            </div>
+            <br>
+            <a href="/authentication/" style="color: blue;" style="text-align: end;">Already have an account? Signin</a>
+            <div class="input-group mt-3">
+                <input type="submit" value="Login" name="login" class="btn btn-sm btn-primary">
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
